@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище Tur_DataBazeModelContainer" CdmEntityContainer="Tur_DataBazeEntities">
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="Tur_DataBazeModel.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="Id_city" ColumnName="Id_city" />
+          <ScalarProperty Name="id_contry" ColumnName="id_contry" />
+          <ScalarProperty Name="city1" ColumnName="city" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contries">
+      <EntityTypeMapping TypeName="Tur_DataBazeModel.Contry">
+        <MappingFragment StoreEntitySet="Contry">
+          <ScalarProperty Name="Id_contry" ColumnName="Id_contry" />
+          <ScalarProperty Name="contry1" ColumnName="contry" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hotels">
+      <EntityTypeMapping TypeName="Tur_DataBazeModel.Hotel">
+        <MappingFragment StoreEntitySet="Hotel">
+          <ScalarProperty Name="photo" ColumnName="photo" />
+          <ScalarProperty Name="linck" ColumnName="linck" />
+          <ScalarProperty Name="Id_hotel" ColumnName="Id_hotel" />
+          <ScalarProperty Name="id_contry" ColumnName="id_contry" />
+          <ScalarProperty Name="id_city" ColumnName="id_city" />
+          <ScalarProperty Name="hotel1" ColumnName="hotel" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="coment" ColumnName="coment" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="img" ColumnName="img" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Turs">
+      <EntityTypeMapping TypeName="Tur_DataBazeModel.Tur">
+        <MappingFragment StoreEntitySet="Tur">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+          <ScalarProperty Name="id_contry" ColumnName="id_contry" />
+          <ScalarProperty Name="id_city" ColumnName="id_city" />
+          <ScalarProperty Name="id_hotel" ColumnName="id_hotel" />
+          <ScalarProperty Name="dateStart" ColumnName="dateStart" />
+          <ScalarProperty Name="dateEnd" ColumnName="dateEnd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

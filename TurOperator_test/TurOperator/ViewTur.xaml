@@ -1,0 +1,204 @@
+﻿<Window x:Class="TurOperator.ViewTur"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:TurOperator"
+        mc:Ignorable="d"
+        Title="Наши предложения " Height="950" Width="1200" WindowStartupLocation="Manual" Loaded="Window_Loaded">
+    <Window.Resources>
+        <Style TargetType="DatePicker">
+            
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel  Grid.Column="0" >
+            
+            <Label Style="{StaticResource mLabel}">
+                <Label.Template>
+                    <ControlTemplate>
+                        <Border CornerRadius="12" Padding="2" BorderThickness="2" BorderBrush="Silver">
+                            <Label Content="Вы выбрали тур в : " TextBlock.Foreground="#000000" ></Label>
+                        </Border>
+                    </ControlTemplate>
+                </Label.Template>
+            </Label>
+            <Label Style="{StaticResource mLabel}">
+                <Label.Template>
+                    <ControlTemplate>
+                        <Border CornerRadius="12" Padding="2" BorderThickness="2" BorderBrush="Silver">
+                            <Label Content="Страна" TextBlock.Foreground="#000000" HorizontalAlignment="Center" ></Label>
+                        </Border>
+                    </ControlTemplate>
+                </Label.Template>
+            </Label>
+            
+          
+            <TextBox x:Name="tbContry" Style="{StaticResource mText}"></TextBox>
+            <Label Style="{StaticResource mLabel}">
+                <Label.Template>
+                    <ControlTemplate>
+                        <Border CornerRadius="12" Padding="2" BorderThickness="2" BorderBrush="Silver">
+                            <Label Content="Город" TextBlock.Foreground="#000000" HorizontalAlignment="Center" ></Label>
+                        </Border>
+                    </ControlTemplate>
+                </Label.Template>
+            </Label>
+            
+            <TextBox x:Name="tbCity" Style="{StaticResource mText}"></TextBox>
+            <Label Style="{StaticResource mLabel}">
+                <Label.Template>
+                    <ControlTemplate>
+                        <Border CornerRadius="12" Padding="2" BorderThickness="2" BorderBrush="Silver">
+                            <Label Content="Отель" TextBlock.Foreground="#000000" HorizontalAlignment="Center" ></Label>
+                        </Border>
+                    </ControlTemplate>
+                </Label.Template>
+            </Label>
+            
+            <TextBox x:Name="tbHotel" Style="{StaticResource mText}"></TextBox>
+            <Label Style="{StaticResource mLabel}">
+                <Label.Template>
+                    <ControlTemplate>
+                        <Border CornerRadius="12" Padding="2" BorderThickness="2" BorderBrush="Silver">
+                            <Label Content="Укажите начальную дату:" TextBlock.Foreground="#000000" HorizontalAlignment="Center" ></Label>
+                        </Border>
+                    </ControlTemplate>
+                </Label.Template>
+            </Label>
+            <DatePicker x:Name="dStart"  Width="200" Margin="20,10,20,10">
+               
+            </DatePicker>
+            <Label Style="{StaticResource mLabel}">
+                <Label.Template>
+                    <ControlTemplate>
+                        <Border CornerRadius="12" Padding="2" BorderThickness="2" BorderBrush="Silver">
+                            <Label Content="Укажите конечную дату:" TextBlock.Foreground="#000000"   HorizontalAlignment="Center" ></Label>
+                        </Border>
+                    </ControlTemplate>
+                </Label.Template>
+            </Label>
+
+            <DatePicker x:Name="dEnd" Width="200" Margin="20,10,20,10"><!--Margin="20,10,20,10"-->
+
+            </DatePicker>
+           
+            <Label Style="{StaticResource mLabel}">
+                <Label.Template>
+                    <ControlTemplate>
+                        <Border CornerRadius="12" Padding="2" BorderThickness="2" BorderBrush="Silver">
+                            <Label Content="Стоимость путевки" TextBlock.Foreground="#000000" ></Label>
+                        </Border>
+                    </ControlTemplate>
+                </Label.Template>
+            </Label>
+            <TextBox x:Name="tbPrice" Style="{StaticResource mText}"></TextBox>
+            <TextBlock Margin="10,0,0,0" Foreground="#FF0000" FontSize="15">Для оформления тура нужна регистрация</TextBlock>
+            <Button x:Name="bt_AddTur" Content="Заказать тур" Style="{StaticResource GlassButton1}" TextBlock.Foreground="#FF0000"  Click="bt_AddTur_Click" Height="30" Margin="50,10,50,10"></Button>
+            <Button x:Name="bt_Reg" Content="Регистрация" Style="{StaticResource GlassButton1}" TextBlock.Foreground="#FF0000"  Height="30" Margin="50,0,50,10" Click="bt_Reg_Click"></Button>
+            <StackPanel>
+                <Image x:Name="img_preview" Height="300" Width="300" Margin="0,5,0,5"></Image>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel  Grid.Column="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                </Grid.RowDefinitions>
+                <!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions> -->
+                <StackPanel Grid.Row="1" Orientation="Horizontal">
+                    <Label Style="{StaticResource mLabel}">
+                        <Label.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="12" Padding="2" BorderThickness="2" BorderBrush="Silver">
+                                    <Label Content="Выберита страну:" TextBlock.Foreground="#000000"   HorizontalAlignment="Center" ></Label>
+                                </Border>
+                            </ControlTemplate>
+                        </Label.Template>
+                    </Label>
+                    <ComboBox x:Name="cb_Region"  SelectionChanged="cb_Region_SelectionChanged"  Style="{StaticResource mCombo}">
+                   
+                    </ComboBox>
+                    <!--<ComboBox x:Name="cb_City"   SelectionChanged="cb_City_SelectionChanged"   Style="{StaticResource mCombo}"></ComboBox>-->
+                      
+                           
+                    
+                    <Button x:Name="viewTur" Content="Показать все" Style="{StaticResource GlassButton1}" TextBlock.Foreground="#FF0000" Height="30" Width="100" Click="viewTur_Click" ></Button>
+                </StackPanel>
+                <StackPanel  Grid.Row="2" >
+                    <!--<Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>Grid.Column="0"-->
+
+                        <StackPanel >
+                            <!--<ListBox x:Name="lb_Hotel" Width="150"></ListBox>Height="300" Width="600"-->
+                        <DataGrid x:Name="dgTur" AutoGenerateColumns="False" ColumnWidth="*" ScrollViewer.VerticalScrollBarVisibility="Visible" Height="650" MouseDoubleClick="dgTur_MouseDoubleClick"  >
+                            <DataGrid.Resources>
+                                <Style TargetType="TextBlock" x:Key="WrapText">
+                                    <Setter Property="TextWrapping" Value="Wrap"/>
+                                </Style>
+                            </DataGrid.Resources>
+                            <DataGrid.Columns>
+                               
+                               <!-- <DataGridTemplateColumn>
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Button Content="Выбрать"
+                                Height="25"
+            Tag="{Binding SelectedIndex, ElementName=gdTur}"
+            />--><!--"Click"="Button_Click"--><!--
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>-->
+                                <DataGridTextColumn  Header="Страна" Binding= "{Binding Path=_contry}"/>
+                                <DataGridTextColumn   Header="Город" Binding= "{Binding Path=_city}"/>
+                                <DataGridTextColumn   Header="Отель" Binding= "{Binding Path=_hotel}"/>
+                                <DataGridTextColumn   Header="категория" Binding= "{Binding Path=_category}"/>
+                                <DataGridTextColumn  Width="200" Header="Описание" Binding= "{Binding Path=_coment}" ElementStyle="{StaticResource WrapText}"/>
+                                <DataGridTextColumn  Header="Цена" Binding= "{Binding Path=_price}"/>
+                                <DataGridTextColumn Header="Ссылка" Binding= "{Binding Path=_linck}"/>
+                                <DataGridTemplateColumn Header="Вид">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Image Source="{Binding Path=_img}"/>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </StackPanel>
+                        <!--<StackPanel Grid.Column="1">
+                            <Image x:Name="im_Hotel" Width="200" Height="200"></Image>
+                        </StackPanel>-->
+                    <!--</Grid>-->
+                </StackPanel>
+                <!--<StackPanel  Grid.Row="2"> </StackPanel>-->
+
+
+            </Grid>
+
+        </StackPanel>
+        <!--<StackPanel Grid.Row="2" Grid.Column="1">
+
+            <TextBox x:Name="tb_Coment" ></TextBox>
+            <Button x:Name="bt_ViewAddTur" Content="Оформить тур"  ></Button>
+        </StackPanel>-->
+    </Grid>
+</Window>

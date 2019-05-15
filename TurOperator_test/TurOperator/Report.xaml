@@ -1,0 +1,75 @@
+﻿<Window x:Class="TurOperator.Report"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TurOperator"
+        mc:Ignorable="d"
+        Title="Выбраный Вами тур" Height="800" Width="960" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <FlowDocumentScrollViewer x:Name="doc"   Grid.Row="0">
+            <FlowDocument >
+                <Paragraph  TextAlignment="Center" FontSize="20">
+                    Уважаемый 
+                    <TextBlock x:Name="klient"></TextBlock>
+                </Paragraph>
+                <Paragraph TextAlignment="Center" FontSize="20" >
+                    Спасибо Вам за то что воспользовались услугами нашей компании.
+                </Paragraph>
+                <BlockUIContainer  FontSize="15" >
+                    <StackPanel>
+                        <TextBlock TextAlignment="Left">Мы рады сообщить Вам что с :</TextBlock>
+                        <TextBlock  x:Name="tbStartData" TextAlignment="Center"  Foreground="#FF0000"></TextBlock>
+                        <TextBlock TextAlignment="Center">по</TextBlock>
+                        <TextBlock  x:Name="tbEndData" TextAlignment="Center"  Foreground="#FF0000"></TextBlock>
+                    </StackPanel>
+                </BlockUIContainer>
+                <Paragraph  TextAlignment="Center" FontSize="15" >Вы оформили туристическую путевку в одно из прекараснейших мест на земле.</Paragraph>
+                <Paragraph>
+                    <TextBlock TextAlignment="Left" FontSize="15" >В страну под названием :</TextBlock>
+
+                    <TextBlock  x:Name="tbContry" TextAlignment="Center"  Foreground="#FF0000"></TextBlock>
+                </Paragraph>
+                <Paragraph>
+                    <TextBlock TextAlignment="Left" FontSize="15" >Посетите чудесный город :</TextBlock>
+                    <TextBlock  x:Name="tbCity" TextAlignment="Center"  Foreground="#FF0000"></TextBlock>
+                   </Paragraph>
+                <Paragraph FontSize="15" >
+                    <TextBlock TextAlignment="Left">Где для Вас забронирован номер в отеле :</TextBlock>
+                   
+                    </Paragraph>
+                <Paragraph FontSize="15" >
+                    <TextBlock  x:Name="tbHotel" TextAlignment="Center"  Foreground="#FF0000"></TextBlock>
+                </Paragraph>
+                <Paragraph FontSize="10" >
+                    <TextBlock   TextAlignment="Left" >Стоимость путевки составляет :</TextBlock>
+                    <TextBlock  x:Name="tbPrice" TextAlignment="Center"  Foreground="#FF0000"></TextBlock>
+                </Paragraph>
+                <BlockUIContainer>
+                    <StackPanel>
+                        <Image x:Name="myImage" Height="300" Width="500"></Image>
+                     <DockPanel >
+            <TextBlock HorizontalAlignment="Left">Наш телефон : 111-111-111  </TextBlock>
+                <TextBlock HorizontalAlignment="Center">Наш email : test@test.ua</TextBlock>
+            </DockPanel>
+                    </StackPanel>
+                </BlockUIContainer>
+            </FlowDocument>
+
+            </FlowDocumentScrollViewer>
+        <StackPanel Grid.Row="1" >
+           
+            <DockPanel HorizontalAlignment="Center">
+            <Button x:Name="btSave" Content="Сохранить" Margin="0,0,5,0" Height="30" Click="btSave_Click"></Button>
+                <Button x:Name="btEmaill" Content="Отправить на emaill" Margin="0,0,5,0" Height="30" Click="btEmaill_Click"></Button>
+                <Button x:Name="btPrint" Content="Отправить на печать" Margin="0,0,5,0" Height="30" Click="btPrint_Click" ></Button>
+                <Button x:Name="btExit" Content="    Выход    " Margin="0,0,5,0" Height="30" Click="btExit_Click"></Button>
+            </DockPanel> 
+        </StackPanel>
+
+    </Grid>
+</Window>

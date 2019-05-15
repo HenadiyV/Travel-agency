@@ -1,0 +1,40 @@
+﻿<Window x:Class="TurOperator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TurOperator"
+        mc:Ignorable="d"
+        Title="Туристическое агенство" Height="400" Width="525" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" ></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Vertical" Width="Auto">
+            
+        </StackPanel><!---->
+        <StackPanel x:Name="myPanel" Grid.Column="0" Grid.Row="0" Visibility="Hidden">
+            <Button x:Name="btGo" Content=" Вход" Style="{StaticResource GlassButton1}" Click="btGo_Click" ></Button>
+            <Button x:Name="btGo1" Content="Регистрация" Style="{StaticResource GlassButton1}" Click="btGo1_Click" ></Button>
+            
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <Image x:Name="showImage" MouseDown="showImage_MouseDown"></Image>
+        </StackPanel>
+        <StackPanel x:Name="panelGo" Grid.Row="1" Grid.Column="1" >
+            
+            <TextBlock x:Name="tbAnim" HorizontalAlignment="Center" FontSize="15"></TextBlock>
+           <!-- <Image x:Name="G"></Image>Подождите идет загрузка данных-->
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <Button x:Name="btOpen" Content="Добро пожаловать" Style="{StaticResource GlassButton}" Click="btOpen_Click" ></Button>
+        </StackPanel>
+        
+    </Grid>
+</Window>
